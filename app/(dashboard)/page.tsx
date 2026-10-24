@@ -1,5 +1,16 @@
 import { Button } from '@/components/ui/button';
-import { ArrowRight, CreditCard, Database } from 'lucide-react';
+import Link from 'next/link';
+import {
+  ArrowRight,
+  Boxes,
+  CreditCard,
+  Database,
+  Hexagon,
+  Layers,
+  Mountain,
+  Orbit,
+  Waves
+} from 'lucide-react';
 import { Terminal } from './terminal';
 
 export default function HomePage() {
@@ -18,7 +29,7 @@ export default function HomePage() {
                 ready-to-use template. Packed with modern technologies and
                 essential integrations.
               </p>
-              <div className="mt-8 sm:max-w-lg sm:mx-auto sm:text-center lg:text-left lg:mx-0">
+              <div className="mt-8 flex flex-wrap gap-4 sm:max-w-lg sm:mx-auto sm:justify-center lg:justify-start lg:mx-0">
                 <a
                   href="https://vercel.com/templates/next.js/next-js-saas-starter"
                   target="_blank"
@@ -32,11 +43,45 @@ export default function HomePage() {
                     <ArrowRight className="ml-2 h-5 w-5" />
                   </Button>
                 </a>
+                <Link href="/pricing">
+                  <Button
+                    size="lg"
+                    variant="ghost"
+                    className="text-lg rounded-full"
+                  >
+                    See pricing
+                  </Button>
+                </Link>
               </div>
             </div>
             <div className="mt-12 relative sm:max-w-lg sm:mx-auto lg:mt-0 lg:max-w-none lg:mx-0 lg:col-span-6 lg:flex lg:items-center">
               <Terminal />
             </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="pb-12">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <p className="text-center text-sm font-medium text-gray-500">
+            Trusted by 2,000+ teams
+          </p>
+          <div className="mt-6 flex flex-wrap items-center justify-center gap-x-10 gap-y-4 text-gray-400">
+            {[
+              { name: 'Northwind', icon: Mountain },
+              { name: 'Acme Labs', icon: Hexagon },
+              { name: 'Stackline', icon: Layers },
+              { name: 'Orbitly', icon: Orbit },
+              { name: 'Tidewater', icon: Waves },
+              { name: 'Cubeworks', icon: Boxes }
+            ].map(({ name, icon: Icon }) => (
+              <div key={name} className="flex items-center gap-2">
+                <Icon className="h-6 w-6" />
+                <span className="text-lg font-semibold tracking-tight">
+                  {name}
+                </span>
+              </div>
+            ))}
           </div>
         </div>
       </section>
