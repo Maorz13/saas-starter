@@ -64,7 +64,7 @@ export default function HomePage() {
       <section className="pb-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <p className="text-center text-sm font-medium text-gray-500">
-            Trusted by 2,000+ teams
+            Trusted by 2,500+ teams worldwide
           </p>
           <div className="mt-6 flex flex-wrap items-center justify-center gap-x-10 gap-y-4 text-gray-400">
             {[
