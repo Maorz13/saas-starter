@@ -34,6 +34,25 @@ export function Login({ mode = 'signin' }: { mode?: 'signin' | 'signup' }) {
       </div>
 
       <div className="mt-8 sm:mx-auto sm:w-full sm:max-w-md">
+        {mode === 'signin' && (
+          <div className="mb-6">
+            <Button
+              type="button"
+              variant="outline"
+              className="w-full rounded-full"
+            >
+              Continue with Google
+            </Button>
+            <div className="relative mt-6">
+              <div className="absolute inset-0 flex items-center">
+                <div className="w-full border-t border-gray-300" />
+              </div>
+              <div className="relative flex justify-center text-sm">
+                <span className="px-2 bg-gray-50 text-gray-500">or</span>
+              </div>
+            </div>
+          </div>
+        )}
         <form className="space-y-6" action={formAction}>
           <input type="hidden" name="redirect" value={redirect || ''} />
           <input type="hidden" name="priceId" value={priceId || ''} />
