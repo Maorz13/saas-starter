@@ -66,7 +66,7 @@ export default function HomePage() {
           <p className="text-center text-sm font-medium text-gray-500">
             Trusted by 2,500+ teams worldwide
           </p>
-          <div className="mt-6 flex flex-wrap items-center justify-center gap-x-10 gap-y-4 text-gray-400">
+          <div className="mt-6 flex flex-wrap items-center justify-center gap-x-6 gap-y-3 sm:gap-x-10 sm:gap-y-4 text-gray-400">
             {[
               { name: 'Northwind', icon: Mountain },
               { name: 'Acme Labs', icon: Hexagon },
@@ -76,8 +76,8 @@ export default function HomePage() {
               { name: 'Cubeworks', icon: Boxes }
             ].map(({ name, icon: Icon }) => (
               <div key={name} className="flex items-center gap-2">
-                <Icon className="h-6 w-6" />
-                <span className="text-lg font-semibold tracking-tight">
+                <Icon className="h-5 w-5 sm:h-6 sm:w-6" />
+                <span className="text-base sm:text-lg font-semibold tracking-tight">
                   {name}
                 </span>
               </div>
